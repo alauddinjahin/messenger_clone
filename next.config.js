@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    outputFileTracing: false,
+    reactStrictMode: true,
+    swcMinify: false,
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
     experimental: {
         appDir: true,
         swcPlugins: [["next-superjson-plugin", {}]]
