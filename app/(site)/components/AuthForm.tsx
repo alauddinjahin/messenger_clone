@@ -6,6 +6,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { BsGithub, BsGoogle  } from 'react-icons/bs';
+import { SiZoho } from 'react-icons/si';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import { toast } from "react-hot-toast";
 import { signIn, useSession } from 'next-auth/react';
@@ -205,6 +206,12 @@ const AuthForm = () => {
                 icon={BsGoogle} 
                 onClick={() => socialAction('google')} 
               />
+                  
+              <AuthSocialButton 
+                icon={SiZoho} 
+                onClick={() => socialAction('zoho')} 
+              />
+                      
             </div>
           </div>
           <div 
